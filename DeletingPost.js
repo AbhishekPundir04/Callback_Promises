@@ -75,34 +75,34 @@ createPost({ title: 'Post Three', body: 'This is post three'})
 
 
 
-    function deletePost(){
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                if(posts.length>0){
-                    const lastelement =posts.pop()
-                    resolve(lastelement);
-                } else {
-                    reject(console.log("Array is empty"))
-                }
-            }, 1000)
-        });
-    }
+//     function deletePost(){
+//         return new Promise((resolve, reject) => {
+//             setTimeout(() => {
+//                 if(posts.length>0){
+//                     const lastelement =posts.pop()
+//                     resolve(lastelement);
+//                 } else {
+//                     reject(console.log("Array is empty"))
+//                 }
+//             }, 1000)
+//         });
+//     }
     
-    createPost({ title: 'Post Three', body: 'This is post three'})
-    .then(() => {
-        getPosts()
-        deletePost().then(() => {
-            getPosts();
-            deletePost().then(() => {
-                getPosts();
-                deletePost().then(() => {
-                    getPosts()
-                    deletePost().then(() => {})
-                    .catch((err) => {
-                        console.log('Inside catch block', err);
-                    })
-                }).catch(() => console.log("Empty"))
-            }).catch(() => console.log("Empty"))
-        }) .catch(() => console.log("Empty"))
-    })
-    .catch(err => console.log(err));
+//     createPost({ title: 'Post Three', body: 'This is post three'})
+//     .then(() => {
+//         getPosts()
+//         deletePost().then(() => {
+//             getPosts();
+//             deletePost().then(() => {
+//                 getPosts();
+//                 deletePost().then(() => {
+//                     getPosts()
+//                     deletePost().then(() => {})
+//                     .catch((err) => {
+//                         console.log('Inside catch block', err);
+//                     })
+//                 }).catch(() => console.log("Empty"))
+//             }).catch(() => console.log("Empty"))
+//         }) .catch(() => console.log("Empty"))
+//     })
+//     .catch(err => console.log(err));
